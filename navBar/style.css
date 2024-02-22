@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 150vh;
+    font-family: sans-serif;
+    font-size: 1.2em;
+}
+
+.header{
+    width: 100%;
+    min-height: 20vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1px 1px 5px black;
+    position: fixed;
+    top:0;
+    left:0;    
+}
+
+.logo{
+    padding: 20px;
+    width: 25%;
+}
+
+.navBar{
+    width: 50%;
+    background-color: white;
+}
+
+.sections,.links{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0;
+    gap: 2em;
+}
+
+
+
+hr{
+    height: 1px;
+    background-color: grey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: rgb(219, 17, 51);
+    transition: 0.5s;
+}
+.showBarArea{
+    background-color: white;
+    height:60px;
+    width: 60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
+}
+
+.showBar{
+    width: 40px;
+    height: 4px;
+    background-color: black;
+    position: relative;
+    display: none;
+}
+
+.showBar::after{
+    content: '';
+    width: 40px;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    top:-12px;
+    left:0;
+}
+
+.showBar::before{
+    content: '';
+    width: 40px;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    top:12px;
+    left:0;
+}
+
+.footer{
+    height: 10vh;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom:0;
+    left:0;
+    box-shadow: -1px -1px 5px black;
+}
+
+
+
+@media only screen and (max-width:576px){
+    .showBar{
+        display: block;
+    }
+
+    .header{
+        z-index: 3;
+    }
+
+    .navBar{
+        position: absolute;
+        top : 20vh;
+        left: -100vw;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 40vh;
+        transition: 2s;
+    }
+
+    .sections,.links{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px 0;
+        gap: 2em;
+        width: 50%;
+    }
+
+
+}
